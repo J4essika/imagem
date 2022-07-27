@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo-class e pseudo element</title>
+</head>
+
+<body>
+  <h1>Exemplo de  hover</h1>
+    <p>passe o mouse sobre o texto abaixo.</p>
+
+    <div>Passe o mouse aqui.
+
+      <p>TEXTO ESCONDIDO...</p>
+
+   </div>
+
+    <p>Fim do exemplo</p>
+
+
+    
+        
+    
+
+  <style>
+ div > p {              /*  o > p representa a tag filho de paragrafo que foi usada */
+            display: none;
+        }
+
+        div:hover > p{
+            display:block ;  /* segunda estilização*/
+            color:white;
+            background-color: red;
+            width: 300px;
+        }
+        
+
+       
+        
+        
+      div > p:hover{   /*primeira estilização*/
+        color: red;
+      }
+        
+
+        div:hover{
+            color:pink ;
+
+        }
+
+ /* segunda aula */
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      
+    }
+
+    a{
+      font-size: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      
+      background-color:pink;
+      border-radius: 5px;
+    }
+
+
+a:hover{    /*muda de cor quando passa o mouse*/
+  color:chartreuse;
+}
+
+
+a:active{    /*quando quando clica*/
+  color:cadetblue;
+}
+
+a:visited{ /*quando o link já foi aberto*/
+  color:crimson;
+}
+
+
+
+a::after{
+  content:'⇐';
+}
+
+
+a::before{
+  content: '⇒';
+}
+
+
+
+
+
+
+
+
+
+  </style>
+
+
+
+
+<h1>Pseudo-classes</h1>
+<P>Querem saber mais sobre: Acessem esses dois sites.</P>
+<ul>
+  <li><a href="https://www.cupcom.com.br/" 
+    target="_blank">site Cupcom</a></a></li>
+
+
+  <li><a href="https://www.cursoemvideo.com" target="_blank">Curso em video</a></li>
+</ul>
+
+
+    
+
+
+    
+</body>
+</html>
